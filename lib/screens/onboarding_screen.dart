@@ -1,4 +1,5 @@
 import 'package:Flutter_Mucsic_App/constants/AppColor.dart';
+import 'package:Flutter_Mucsic_App/routes.dart';
 import 'package:Flutter_Mucsic_App/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 
@@ -50,13 +51,20 @@ class OnboardingScreen extends StatelessWidget {
                     SizedBox(
                       width: size.width * .42,
                       child: RoundedButton(
-                          text: 'Sign up', verticalPadding: size.height * .025),
+                          press: () {
+                            _handleClick(context);
+                          },
+                          text: 'Sign up',
+                          verticalPadding: size.height * .025),
                     ),
                     SizedBox(
                       width: size.width * .42,
                       child: RoundedButton(
                           text: 'Log in',
                           outline: true,
+                          press: () {
+                            _handleClick(context);
+                          },
                           verticalPadding: size.height * .025),
                     ),
                   ],
@@ -67,5 +75,9 @@ class OnboardingScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  _handleClick(context) {
+    Navigator.of(context).pushNamed(Routes.browse);
   }
 }

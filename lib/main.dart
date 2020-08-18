@@ -1,4 +1,4 @@
-import 'package:Flutter_Mucsic_App/screens/browse_screen.dart';
+import 'package:Flutter_Mucsic_App/routes.dart';
 import 'package:Flutter_Mucsic_App/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Music App',
+        routes: Routes.routes,
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: BrowseScreen());
+        home: OnboardingScreen());
   }
 }
