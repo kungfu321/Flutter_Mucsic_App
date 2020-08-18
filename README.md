@@ -1,4 +1,4 @@
-# Mucsic App - Flutter App
+# Music App - Flutter UI
 
 
 **UI Credit**
